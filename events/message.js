@@ -3,8 +3,8 @@ module.exports = (client, message) => {
 var prefix = process.env.prefix;
     
     if (message.author.bot || message.channel.type === 'dm') return;
-
-    const prefix = client.config.discord.prefix;
+    
+var prefix = process.env.prefix;
 
     if (message.content.indexOf(prefix) !== 0) return;
 
