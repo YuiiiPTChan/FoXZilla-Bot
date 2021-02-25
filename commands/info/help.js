@@ -5,6 +5,9 @@ module.exports = {
     utilisation: '{prefix}help <command name>',
 
     execute(client, message, args) {
+        
+var prefix = process.env.prefix;
+        
         if (!args[0]) {
             const fun = message.client.commands.filter(x => x.category == 'fun').map((x) => '`' + x.name + '`').join(', ');
             const moderation = message.client.commands.filter(x => x.category == 'moderation').map((x) => '`' + x.name + '`').join(', ');
@@ -25,7 +28,7 @@ module.exports = {
                         { name: 'Music Filters', value: client.filters.map((x) => '`' + x + '`').join(', ') },
                     ],
                     timestamp: new Date(),
-                    description: `To use Music filters, ${client.config.discord.prefix}filter (the filter). Example : ${client.config.discord.prefix}filter 8D.`,
+                    description: `To use Music filters, ${prefix}filter (the filter). Example : ${prefix}filter 8D.`,
                 },
             });
         } else {
@@ -42,7 +45,7 @@ module.exports = {
                         { name: 'Name', value: command.name, inline: true },
                         { name: 'Category', value: command.category, inline: true },
                         { name: 'Aliase(s)', value: command.aliases.length < 1 ? 'None' : command.aliases.join(', '), inline: true },
-                        { name: 'Utilisation', value: command.utilisation.replace('{prefix}', client.config.discord.prefix), inline: true },
+                        { name: 'Utilisation', value: command.utilisation.replace('{prefix}', prefix), inline: true },
                     ],
                     timestamp: new Date(),
                     description: 'Find information on the command provided.\nMandatory arguments `[]`, optional arguments `<>`.',

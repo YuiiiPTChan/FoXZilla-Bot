@@ -5,6 +5,9 @@ const client = new discord.Client({ disableMentions: 'everyone' });
 
 const { Player } = require('discord-player');
 
+var token = process.env.token;
+var prefix = process.env.prefix;
+
 client.player = new Player(client);
 client.config = require('./config/bot');
 client.emotes = client.config.emojis;
@@ -36,4 +39,4 @@ for (const file of player) {
     client.player.on(file.split(".")[0], event.bind(null, client));
 };
 
-client.login(client.config.discord.token);
+client.login(token);
