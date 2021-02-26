@@ -24,7 +24,7 @@ execute(client, message, args) {
 
                 var text = index.selftext
                 const textembed = new Discord.MessageEmbed()
-                .setTitle("Redit MEMES")
+                .setTitle("Reddit MEMES")
                     .setColor("RANDOM")
                     .setURL(`https://reddit.com/${subRedditName}`)
 
@@ -38,14 +38,14 @@ execute(client, message, args) {
 
             if (index.post_hint !== 'image') {
                 const textembed = new Discord.RichEmbed()
-                .setTitle("Redit MEMES")
+                .setTitle("Reddit MEMES")
                 .setColor("RANDOM")
                 .setURL(`https://reddit.com/${subRedditName}`)
 
                 message.channel.send(textembed)
             }
             const imageembed = new Discord.MessageEmbed()
-            .setTitle("Redit MEMES")
+            .setTitle("Reddit MEMES")
             .setImage(image)
                 .setColor("RANDOM")
                 .setURL(`https://reddit.com/${subRedditName}`)
