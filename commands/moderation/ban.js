@@ -36,6 +36,10 @@ const ban_embed = new Discord.MessageEmbed()
 message.channel.send(ban_embed);
 
 let logschannel = JSON.parse(fs.readFileSync(pathResolver.join( __dirname , '../../config/logs_channels.json')));
+
+if(namechannel == 0) return;
+
+
 let namechannel = logschannel[message.guild.name].channel;
 
 if(!namechannel) return message.reply("I dont have a name of log channels!");
