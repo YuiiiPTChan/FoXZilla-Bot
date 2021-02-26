@@ -20,15 +20,20 @@ id[message.guild.name] = {channel: args[0]};
 fs.writeFile( pathResolver.join( __dirname , '../../config/logs_channels.json'  ) , JSON.stringify(id), (err) => {
 if (err) console.log(err)
 
+if(args[0]==0){
+    message.reply(`You cancelled logs in ${message.guild.name}`);
+    return;
+}
+
 if(message.guild.channels.cache.get(args[0]) === undefined)  { 
 
     message.reply("This channel id doesn`t exist in this server!")
-
+return;
 } 
   
 else{
     message.reply(`Already setup logs to <#${args[0]}>`);
-
+return;
     }
 });
 
@@ -50,6 +55,10 @@ const id = JSON.parse(fs.readFileSync( pathResolver.join( __dirname , '../../con
 id[message.guild.name] = {channel: args[0]};
             
 fs.writeFile( pathResolver.join( __dirname , '../../config/logs_channels.json'  ) , JSON.stringify(id), (err) => {if (err) console.log(err)});
+
+if(args[0]==0){
+    message.reply(`You cancelled logs in ${message.guild.name}`);
+}
 
 if(message.guild.channels.cache.get(args[0]) === undefined)  { 
 

@@ -101,6 +101,9 @@ message.channel.send(purge_message);
 let logschannel = JSON.parse(fs.readFileSync(pathResolver.join( __dirname , '../../config/logs_channels.json')));
 let namechannel = logschannel[message.guild.name].channel;
 
+if(namechannel == 0) return;
+
+
 if(!namechannel){
 
     message.reply("I dont have a name of log channels!");
