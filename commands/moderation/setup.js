@@ -27,7 +27,7 @@ if(args[0]==0){
 
 if(message.guild.channels.cache.get(args[0]) === undefined)  { 
 
-    message.reply("This channel id doesn`t exist in this server!")
+    message.reply("This channel doesn't exist in this server!")
 return;
 } 
   
@@ -62,7 +62,7 @@ if(args[0]==0){
 
 if(message.guild.channels.cache.get(args[0]) === undefined)  { 
 
-message.reply("This channel id doesn`t exist in this server!")
+message.reply("This channel doesn't exist in this server!")
 
 } 
 
