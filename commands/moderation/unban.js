@@ -25,7 +25,7 @@ message.guild.members.unban(id);
     
 const unban_embed = new Discord.MessageEmbed()
     .setColor('#ff0000')
-    .setAuthor(`A member get Unbanned`)
+    .setAuthor('A member got Unbanned')
     .addField('Unbanned User username:', `<@!${id}>`, false)
     .addField('Unbanned User ID:', `${id}`, false)
     .addField('Moderator Username:', `<@!${message.author.id}>`, false)
@@ -41,7 +41,7 @@ let namechannel = logschannel[message.guild.name].channel;
 if(namechannel == 0) return;
 
 
-if(!namechannel) return message.reply("I dont have a name of log channels!");
+if(!namechannel) return message.reply("I dont have the name of logs channel!");
 
 const channel = client.channels.cache.get(`${namechannel}`);
 channel.send(unban_embed);
