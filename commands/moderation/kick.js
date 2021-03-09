@@ -25,7 +25,7 @@ const member_kick = message.mentions.members.first();
 
 const kick_embed = new Discord.MessageEmbed()
     .setColor('#ff0000')
-    .setAuthor(`${member.username}\`s get Kicked`, ``, '')
+    .setAuthor(`${member.username}\`s got Kicked`, ``, '')
     .setThumbnail(`${member.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 })}`)
     .addField('Kicked User username:', `<@!${member.id}>`, false)
     .addField('Kicked User ID:', `${member.id}`, false)
@@ -44,7 +44,7 @@ let namechannel = logschannel[message.guild.name].channel;
 if(namechannel == 0) return;
 
 
-if(!namechannel) return message.reply("I dont have a name of log channels!");
+if(!namechannel) return message.reply("I dont have the name of log channels!");
 
 const channel = client.channels.cache.get(`${namechannel}`);
 channel.send(kick_embed);
