@@ -17,21 +17,21 @@ if(message.author.id === config.ownerid) {
 
 if (isNaN(amount)) {
 
-    message.reply('that doesn\'t seem to be a valid number.');
+    message.reply('That doesn\'t seem to be a valid number.');
     return;
 
 }
     
 if(amount <= 1 || amount > 100) {
         
-    message.reply('you need to input a number between 1 and 99.');
+    message.reply('You need to input a number between 1 and 99.');
     return;
     
 }
 
 message.channel.bulkDelete(amount, true).catch(err => {
 console.error(err);
-message.channel.send('there was an error trying to prune messages in this channel!');
+message.channel.send('There was an error trying to prune messages in this channel!');
 
 });
 
@@ -50,7 +50,7 @@ let namechannel = logschannel[message.guild.name].channel;
 
 if(!namechannel){
 
-    message.reply("I dont have a name of log channels!");
+    message.reply("I dont have the name of log channels!");
     return;
 } 
 
@@ -70,14 +70,14 @@ const amount = parseInt(args[0]) + 1;
 
 if (isNaN(amount)) {
 
-    message.reply('that doesn\'t seem to be a valid number.');
+    message.reply('That doesn\'t seem to be a valid number.');
     return;
 
 }
     
 if(amount <= 1 || amount > 100) {
         
-    message.reply('you need to input a number between 1 and 99.');
+    message.reply('You need to input a number between 1 and 99.');
     return;
     
 }
@@ -106,7 +106,7 @@ if(namechannel == 0) return;
 
 if(!namechannel){
 
-    message.reply("I dont have a name of log channels!");
+    message.reply("I dont have the name of log channels!");
     return;
 } 
 
