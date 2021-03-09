@@ -13,7 +13,7 @@ execute(client, message, args) {
 
 if (!message.member.hasPermission('BAN_MEMBERS')) {
     
-    message.reply("You dont have power here!");
+    message.reply("You don't have power here!");
     return;
 
 }
@@ -25,7 +25,7 @@ message.guild.members.ban(member);
 
 const ban_embed = new Discord.MessageEmbed()
     .setColor('#ff0000')
-    .setAuthor(`${member.username}\`s get Banned`, `${member.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 })}`, '')
+    .setAuthor(`${member.username}\`s got Banned`, `${member.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 })}`, '')
     .setThumbnail(`${member.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 })}`)
     .addField('Banned User username:', `${member.username}`, false)
     .addField('Banned User ID:', `${member.id}`, false)
@@ -42,7 +42,7 @@ if(namechannel == 0) return;
 
 let namechannel = logschannel[message.guild.name].channel;
 
-if(!namechannel) return message.reply("I dont have a name of log channels!");
+if(!namechannel) return message.reply("I dont have the name of log channels!");
 
     const channel = client.channels.cache.get(`${namechannel}`);
     channel.send(ban_embed);
